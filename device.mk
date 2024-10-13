@@ -74,6 +74,10 @@ $(foreach f,$(wildcard $(LOCAL_PATH)/rootdir/bin/*.sh),\
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/keylayout/goodix_ts.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/goodix_ts.kl
 
+# Moto Camera 4
+TARGET_MOTCAMERA4 := dubai
+$(call inherit-product, vendor/motorola/MotCamera4/motcamera4.mk)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2.vendor \
